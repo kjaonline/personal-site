@@ -18,6 +18,7 @@
 
 <style>
 	footer {
+		 padding: 30px;
 		 text-align: center;
 	}
 </style>

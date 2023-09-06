@@ -6,24 +6,17 @@
 		'Retention',
 		'Activation',
 		'Onboarding',
-		'ARR optimization'
+		'Intelligent user tracking'
 	]
 
-	const growthEngineer = () => {
-		alert('yolo')
-	}
+	const yoe = new Date().getFullYear() - 2018;
 
 	setInterval(()=>{
 		// Move the last item to the first position
 		const lastItem = skillsArray.pop();
 		skillsArray.unshift(lastItem);
 		skillsArray = skillsArray
-		if(interval === skillsArray.length){
-			interval = 0
-		} else {
-			interval++
-		}
-	},1000)
+	},1500)
 </script>
 
 <svelte:head>
@@ -33,7 +26,7 @@
 
 <section>
 	<div>
-		Unlocking Digital Growth: Combining 8 Years of Internet Marketing Expertise with 5 Years of Fullstack Engineering for Focused Customer Retention and Activation.
+		Combining 8 Years of Internet Marketing Expertise with {yoe} Years of Fullstack Software Engineering to unlock
 		<div class="slider">
 			<ul>
 			{#each skillsArray as skill}
@@ -47,6 +40,7 @@
 
 <style lang="scss" scoped>
 	.slider {
+		margin-left: 5px;
 		display: inline-block;
 		transform: translateY(20px);
 		ul {
