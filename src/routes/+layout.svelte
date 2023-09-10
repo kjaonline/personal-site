@@ -1,7 +1,6 @@
-<script lang="ts">
+<script>
 	import Header from './Header.svelte';
 	import './styles.css';
-
 	const date = new Date().getFullYear()
 </script>
 

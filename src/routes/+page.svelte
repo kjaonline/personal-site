@@ -1,21 +1,31 @@
 <script>
+	export let data;
 	let interval = 0
+	let displayArray = ['', '', '']
 	let skillsArray = [
 		'Experimentation',
 		'AB Testing',
 		'Retention',
 		'Activation',
 		'Onboarding',
-		'Intelligent user tracking'
+		'Intelligent user tracking',
+		'Growth'
 	]
 
 	const yoe = new Date().getFullYear() - 2018;
 
 	setInterval(()=>{
+		displayArray = []
 		// Move the last item to the first position
-		const lastItem = skillsArray.pop();
-		skillsArray.unshift(lastItem);
-		skillsArray = skillsArray
+		if ( interval <= skillsArray.length ){
+			displayArray[0] = skillsArray[interval]
+			displayArray[1] = skillsArray[interval + 1]
+			displayArray[2] = skillsArray[interval + 2]
+			interval++
+		} 
+		if ( interval > skillsArray.length - 3) {
+			interval = 0
+		}
 	},1500)
 </script>
 
@@ -29,36 +39,36 @@
 		Combining 8 Years of Internet Marketing Expertise with {yoe} Years of Fullstack Software Engineering to unlock
 		<div class="slider">
 			<ul>
-			{#each skillsArray as skill}
-				<li> {skill} </li>
-			{/each}
+				{displayArray[0]}
+				{displayArray[1]}
+				{displayArray[2]}
 			</ul>
 		</div>
 	</div>
-	
+	<div>
+		{#if data && data.posts.length}
+			{#each data.posts as post}
+				<div>
+					{post.title}
+				</div>
+			{/each}
+		{/if}
+	</div>
 </section>
 
 <style lang="scss" scoped>
+	section {
+		text-align: center;
+	}
 	.slider {
 		margin-left: 5px;
-		display: inline-block;
-		transform: translateY(20px);
 		ul {
 			list-style: none;
 			padding: 0;
-			margin: 0;
-		}
-		li {
-			opacity: 0.5;
-		}
-		li:nth-child(3){
-			opacity: 1;
-		}
-		li:nth-child(1), li:nth-child(4) {
-			opacity: 0.1;
-		}
-		li:nth-child(n + 5){
-			display:none;
+			margin: 20px auto;
+			display: flex;
+			justify-content: center;
+			gap: 20px;
 		}
 	}
 </style>
