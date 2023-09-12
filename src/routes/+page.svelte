@@ -1,4 +1,5 @@
 <script>
+	import { PortableText } from "@portabletext/svelte"
 	export let data;
 	let interval = 0
 	let displayArray = ['', '', '']
@@ -13,7 +14,6 @@
 	]
 
 	const yoe = new Date().getFullYear() - 2018;
-
 	setInterval(()=>{
 		displayArray = []
 		// Move the last item to the first position
@@ -49,7 +49,12 @@
 		{#if data && data.posts.length}
 			{#each data.posts as post}
 				<div>
+					<h2>
 					{post.title}
+					</h2>
+					<div>
+						<PortableText value={post.body} />
+					</div>
 				</div>
 			{/each}
 		{/if}
