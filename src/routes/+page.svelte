@@ -1,6 +1,4 @@
 <script>
-	import { PortableText } from "@portabletext/svelte"
-	export let data;
 	let interval = 0
 	let displayArray = ['', '', '']
 	let skillsArray = [
@@ -44,20 +42,6 @@
 				{displayArray[2]}
 			</ul>
 		</div>
-	</div>
-	<div>
-		{#if data && data.posts.length}
-			{#each data.posts as post}
-				<div>
-					<h2>
-					{post.title}
-					</h2>
-					<div>
-						<PortableText value={post.body} />
-					</div>
-				</div>
-			{/each}
-		{/if}
 	</div>
 </section>
 

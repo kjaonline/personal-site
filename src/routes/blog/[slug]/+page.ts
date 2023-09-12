@@ -9,11 +9,10 @@ const client = createClient({
 });
 
 export async function load({ params }) {
-	const data = await client.fetch(`*[_type == 'post']`);
-
+	const data = await client.fetch(`*[slug.current == "${params.slug}"][0]`);
 	if (data) {
 		return {
-			posts: data
+			post: data
 		};
 	}
 	return {
