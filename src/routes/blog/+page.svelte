@@ -14,3 +14,7 @@
 		{/each}
 	{/if}
 </div>
+
+<style>
+
+</style>
