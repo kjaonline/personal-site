@@ -45,6 +45,11 @@ export default defineType({
       type: 'datetime',
     }),
     defineField({
+      name: 'excerpt',
+      title: 'Excerpt',
+      type: 'text' 
+    }),
+    defineField({
       name: 'body',
       title: 'Body',
       type: 'blockContent',
