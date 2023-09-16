@@ -10,9 +10,12 @@ const client = createClient({
 
 export async function load({ params }) {
 	const data = await client.fetch(`*[slug.current == "${params.slug}"][0]`);
+	const author = await client.fetch(`*[_id == "${data.author._ref}"][0]`)
+
 	if (data) {
 		return {
-			post: data
+			post: data,
+			author
 		};
 	}
 	return {

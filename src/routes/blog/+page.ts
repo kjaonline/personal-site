@@ -10,7 +10,6 @@ const client = createClient({
 
 export async function load({ params }) {
 	const data = await client.fetch(`*[_type == 'post']`);
-
 	if (data) {
 		return {
 			posts: data

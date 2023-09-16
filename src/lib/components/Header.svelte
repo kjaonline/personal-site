@@ -3,18 +3,15 @@
 	import github from '$lib/images/github.svg';
 </script>
 
-<header>
-	<div>
-		<a href="/">
-			<h1> Kris Alcordo </h1>
-		</a>
-	</div>
-</header>
+<a href="/">
+	<h1> Kris Alcordo </h1>
+</a>
 
 <style lang="scss" scoped>
-	header {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
+	a {
+		text-decoration: none;
+		&:visited {
+			color: inherit;
+		}
 	}
 </style>

@@ -38,7 +38,9 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@portabletext/to-html": "^2.0.3",
 		"@sanity/client": "^6.4.11",
+		"dayjs": "^1.11.9",
 		"patch-package": "^8.0.0"
 	}
 }

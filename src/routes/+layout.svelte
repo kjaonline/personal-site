@@ -5,16 +5,13 @@
 	const date = new Date().getFullYear()
 </script>
 
-<div class="app">
+<div class="header">
 	<Header />
+	<Nav />
+</div>
+<div class="app">
 	<main>
-		<div class="info">
-			<h3>Links</h3>
-			<Nav />
-		</div>
-		<div class="content">
-			<slot />
-		</div>
+		<slot />
 	</main>
 
 	<footer>
@@ -23,6 +20,15 @@
 </div>
 
 <style lang="scss" scoped>
+	.header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		position: sticky;
+		top: 0;
+		padding: 10px;
+		background: #fff;
+	}
 	.app {
 		width: 100%;
 		max-width: 1000px;
@@ -32,21 +38,5 @@
 	footer {
 		 padding: 30px;
 		 text-align: center;
-	}
-	main {
-		display: flex;
-	}
-
-	.info {
-		width: 300px;
-	}
-
-	.content {
-		width: 100%;
-	}
-
-	h3 {
-		margin: 0 0 10px 0;
-		text-transform: uppercase;
 	}
 </style>
