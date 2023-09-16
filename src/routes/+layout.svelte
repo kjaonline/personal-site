@@ -6,8 +6,10 @@
 </script>
 
 <div class="header">
-	<Header />
-	<Nav />
+	<div class="header-container">
+		<Header />
+		<Nav />
+	</div>
 </div>
 <div class="app">
 	<main>
@@ -21,14 +23,20 @@
 
 <style lang="scss" scoped>
 	.header {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
 		position: sticky;
 		top: 0;
 		padding: 10px;
 		background: #fff;
+		&-container {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			width: 100%;
+			max-width: 1000px;
+			margin: 0 auto;
+		}
 	}
+
 	.app {
 		width: 100%;
 		max-width: 1000px;
