@@ -27,12 +27,13 @@
 	a {
 		text-decoration: none;
 		font-weight: bold;
+		color: var(--main-color-dark);
 		&:visited {
 			color: inherit;
 		}
 		&:hover {
 			transition: 0.5s all;
-			color: blue;
+			color: var(--main-color-mid);
 		}
 	}
 </style>

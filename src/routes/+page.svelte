@@ -1,30 +1,4 @@
 <script>
-	let interval = 0
-	let displayArray = ['', '', '']
-	let skillsArray = [
-		'Experimentation',
-		'AB Testing',
-		'Retention',
-		'Activation',
-		'Onboarding',
-		'Intelligent user tracking',
-		'Growth'
-	]
-
-	const yoe = new Date().getFullYear() - 2018;
-	setInterval(()=>{
-		displayArray = []
-		// Move the last item to the first position
-		if ( interval <= skillsArray.length ){
-			displayArray[0] = skillsArray[interval]
-			displayArray[1] = skillsArray[interval + 1]
-			displayArray[2] = skillsArray[interval + 2]
-			interval++
-		} 
-		if ( interval > skillsArray.length - 3) {
-			interval = 0
-		}
-	},1500)
 </script>
 
 <svelte:head>
@@ -34,30 +8,18 @@
 
 <section>
 	<div>
-		Combining 8 Years of Internet Marketing Expertise with {yoe} Years of Fullstack Software Engineering to unlock
-		<div class="slider">
-			<ul>
-				{displayArray[0]}
-				{displayArray[1]}
-				{displayArray[2]}
-			</ul>
-		</div>
+		<h2>Hey, I'm Kris!</h2>
+		<p>I'm a software developer with deep roots in internet marketing and, specializing in growth engineering that drive
+		key business metrics.</p>
+		<p>Find me on Github and LinkedIn or send me an email.</p>
 	</div>
 </section>
 
 <style lang="scss" scoped>
 	section {
-		text-align: center;
-	}
-	.slider {
-		margin-left: 5px;
-		ul {
-			list-style: none;
-			padding: 0;
-			margin: 20px auto;
-			display: flex;
-			justify-content: center;
-			gap: 20px;
-		}
+		background: var(--main-color-white);
+		padding: 30px;
+		font-size: 21px;
+		line-height: 1.8;
 	}
 </style>

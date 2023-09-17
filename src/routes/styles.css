@@ -358,7 +358,14 @@ html {
   box-sizing: border-box;
 }
 *, *:before, *:after {
-  -webkit-box-sizing: inherit;
-  -moz-box-sizing: inherit;
-  box-sizing: inherit;
-  }
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+:root {
+  --main-color-dark: #112D4E;
+  --main-color-mid: #3F72AF;
+  --main-color-light: #DBE2EF;
+  --main-color-white: #F9F7F7;
+}
